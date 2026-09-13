@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu &amp; Prices — CreativeFaces, Manchester CT</title>
+
+<meta name="description" content="Prices for silk press, cut and style, color, box and goddess braids, extensions, makeup, brows and facials at CreativeFaces in Manchester, CT. All services by appointment — call (860) 212-5175.">
+<meta name="theme-color" content="#19171A">
+<link rel="canonical" href="https://gn-ishaan66.github.io/cfv4/menu.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CreativeFaces Salon and Makeup Bar">
+<meta property="og:title" content="Menu &amp; Prices — CreativeFaces, Manchester CT">
+<meta property="og:description" content="Hair, braids, extensions, makeup and skincare — every service with its price. All services by appointment.">
+<meta property="og:url" content="https://gn-ishaan66.github.io/cfv4/menu.html">
+<meta property="og:image" content="https://gn-ishaan66.github.io/cfv4/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="CreativeFaces logo — Salon, Makeup, Bar">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="tailwind.config.js"></script>
+<link rel="stylesheet" href="site.css">
+</head>
+<body class="bg-charcoal text-cream font-body antialiased">
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- HEADER — same as index.html; section links point back to the homepage -->
+<header class="sticky top-0 z-50 bg-charcoal/90 backdrop-blur border-b border-cream/10">
+  <nav class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between" aria-label="Primary">
+    <a href="index.html" class="shrink-0 -ml-1">
+      <img src="logo-compact.webp" alt="CreativeFaces — home"
+           width="173" height="56" class="h-11 md:h-14 w-auto">
+    </a>
+
+    <div class="hidden lg:flex gap-7 xl:gap-9 text-sm font-medium">
+      <a href="index.html#services" class="hover:text-champagne transition-colors">Services</a>
+      <a href="menu.html" class="text-champagne" aria-current="page">Menu</a>
+      <a href="index.html#boutique" class="hover:text-champagne transition-colors">Boutique</a>
+      <a href="index.html#about" class="hover:text-champagne transition-colors">About</a>
+      <a href="index.html#reviews" class="hover:text-champagne transition-colors">Reviews</a>
+      <a href="index.html#location" class="hover:text-champagne transition-colors">Visit</a>
+    </div>
+
+    <div class="hidden md:flex items-center gap-3">
+      <a href="tel:+18602125175" class="btn-hover hidden md:inline-flex lg:hidden xl:inline-flex items-center whitespace-nowrap text-sm font-semibold text-cream hover:text-champagne px-3 py-2">
+        <i class="fa-solid fa-phone text-xs mr-2" aria-hidden="true"></i>(860)&nbsp;212-5175
+      </a>
+      <a href="#booking" class="btn-hover whitespace-nowrap bg-champagne text-charcoal text-xs font-bold uppercase tracking-wider px-5 py-3 rounded-full">Book Appointment</a>
+    </div>
+
+    <button id="menuBtn" type="button"
+            class="lg:hidden w-11 h-11 grid place-items-center text-2xl rounded-lg"
+            aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <i id="menuIcon" class="fa-solid fa-bars" aria-hidden="true"></i>
+    </button>
+  </nav>
+
+  <div id="mobileMenu" class="lg:hidden max-h-0 px-6">
+    <div class="flex flex-col gap-1 py-4 text-sm font-medium border-t border-cream/10">
+      <a href="index.html#services" class="py-3 hover:text-champagne">Services</a>
+      <a href="menu.html" class="py-3 text-champagne" aria-current="page">Menu &amp; Prices</a>
+      <a href="index.html#boutique" class="py-3 hover:text-champagne">Boutique</a>
+      <a href="index.html#about" class="py-3 hover:text-champagne">About</a>
+      <a href="index.html#reviews" class="py-3 hover:text-champagne">Reviews</a>
+      <a href="index.html#location" class="py-3 hover:text-champagne">Visit</a>
+      <a href="#booking" class="btn-hover bg-champagne text-charcoal text-center font-bold uppercase tracking-wider px-5 py-4 rounded-full mt-3">Book Appointment</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- INTRO -->
+<section class="glow pt-16 pb-14 md:pt-24 md:pb-20 px-6 text-center" aria-labelledby="menu-title">
+  <div class="max-w-3xl mx-auto reveal">
+    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-champagne mb-5">Service Menu</p>
+    <h1 id="menu-title" class="font-display text-5xl sm:text-6xl leading-[1.05] mb-6">Menu &amp; Prices</h1>
+    <p class="text-muted text-lg leading-relaxed max-w-xl mx-auto mb-10">
+      Hair, braids, extensions, makeup and skincare — every service with its price.
+    </p>
+
+    <nav aria-label="Menu sections" class="flex flex-wrap justify-center gap-2.5 mb-8">
+      <a href="#hair-services" class="btn-hover min-h-[44px] inline-flex items-center px-5 rounded-full border border-cream/20 text-sm font-medium hover:border-champagne hover:text-champagne">Hair Services</a>
+      <a href="#braids" class="btn-hover min-h-[44px] inline-flex items-center px-5 rounded-full border border-cream/20 text-sm font-medium hover:border-champagne hover:text-champagne">Braids</a>
+      <a href="#extensions" class="btn-hover min-h-[44px] inline-flex items-center px-5 rounded-full border border-cream/20 text-sm font-medium hover:border-champagne hover:text-champagne">Extensions</a>
+      <a href="#makeup" class="btn-hover min-h-[44px] inline-flex items-center px-5 rounded-full border border-cream/20 text-sm font-medium hover:border-champagne hover:text-champagne">Makeup</a>
+      <a href="#skincare" class="btn-hover min-h-[44px] inline-flex items-center px-5 rounded-full border border-cream/20 text-sm font-medium hover:border-champagne hover:text-champagne">Skincare</a>
+    </nav>
+
+    <p class="text-sm text-muted">
+      All services by appointment <span aria-hidden="true" class="mx-2 text-champagne">·</span>
+      <span class="text-champagne font-semibold">+</span> marks a starting price
+    </p>
+  </div>
+</section>
+
+<!-- HAIR ROOM
+     Prices read "$95<span>+</span>": the "+" is hidden from screen readers and
+     replaced with " and up", so nobody hears "ninety-five dollars plus". -->
+<section id="hair-room" class="py-20 md:py-24 px-6 hairline bg-surface" aria-labelledby="hair-room-title">
+  <div class="max-w-6xl mx-auto">
+    <div class="reveal text-center mb-12">
+      <h2 id="hair-room-title" class="font-display text-4xl md:text-[2.75rem] font-semibold mb-5">Hair Room</h2>
+      <div class="ornament max-w-[14rem] mx-auto" aria-hidden="true"><span></span></div>
+    </div>
+
+    <div class="grid gap-6 max-w-xl mx-auto lg:max-w-none lg:grid-cols-3 lg:gap-8">
+
+      <article id="hair-services" class="reveal bg-charcoal border border-cream/10 rounded-2xl p-7 sm:p-8" aria-labelledby="hair-services-title">
+        <h3 id="hair-services-title" class="font-display text-2xl font-semibold">Hair Services</h3>
+        <div class="w-10 h-px bg-champagne/60 mt-3 mb-4" aria-hidden="true"></div>
+        <dl class="price-list">
+          <div><dt>Silk Press</dt><dd class="text-champagne font-semibold">$75</dd></div>
+          <div><dt>Cut, Blow &amp; Style</dt><dd class="text-champagne font-semibold">$55</dd></div>
+          <div><dt>Color</dt><dd class="text-champagne font-semibold">$95<span aria-hidden="true">+</span><span class="sr-only"> and up</span></dd></div>
+        </dl>
+      </article>
+
+      <article id="braids" class="reveal bg-charcoal border border-cream/10 rounded-2xl p-7 sm:p-8" aria-labelledby="braids-title">
+        <h3 id="braids-title" class="font-display text-2xl font-semibold">Braids</h3>
+        <div class="w-10 h-px bg-champagne/60 mt-3 mb-4" aria-hidden="true"></div>
+        <dl class="price-list">
+          <div><dt>Box Braids</dt><dd class="text-champagne font-semibold">$180<span aria-hidden="true">+</span><span class="sr-only"> and up</span></dd></div>
+          <div><dt>Goddess Braids</dt><dd class="text-champagne font-semibold">$175<span aria-hidden="true">+</span><span class="sr-only"> and up</span></dd></div>
+          <div><dt>Block Twist / Twist</dt><dd class="text-champagne font-semibold">$120<span aria-hidden="true">+</span><span class="sr-only"> and up</span></dd></div>
+          <div><dt>Micro Braids</dt><dd class="text-champagne font-semibold">$275<span aria-hidden="true">+</span><span class="sr-only"> and up</span></dd></div>
+        </dl>
+      </article>
+
+      <article id="extensions" class="reveal bg-charcoal border border-cream/10 rounded-2xl p-7 sm:p-8" aria-labelledby="extensions-title">
+        <h3 id="extensions-title" class="font-display text-2xl font-semibold">Hair Extensions</h3>
+        <div class="w-10 h-px bg-champagne/60 mt-3 mb-4" aria-hidden="true"></div>
+        <dl class="price-list">
+          <div><dt>Tape-In</dt><dd class="text-champagne font-semibold">$200<span aria-hidden="true">+</span><span class="sr-only"> and up</span></dd></div>
+          <div><dt>Sew-In</dt><dd class="text-champagne font-semibold">$180<span aria-hidden="true">+</span><span class="sr-only"> and up</span></dd></div>
+          <div><dt>Micro Links</dt><dd class="text-champagne font-semibold">$220<span aria-hidden="true">+</span><span class="sr-only"> and up</span></dd></div>
+        </dl>
+      </article>
+
+    </div>
+
+    <p class="reveal text-center font-display italic text-muted mt-10">Consultations available.</p>
+  </div>
+</section>
+
+<!-- FACIAL ROOM -->
+<section id="facial-room" class="py-20 md:py-24 px-6 hairline" aria-labelledby="facial-room-title">
+  <div class="max-w-6xl mx-auto">
+    <div class="reveal text-center mb-12">
+      <h2 id="facial-room-title" class="font-display text-4xl md:text-[2.75rem] font-semibold mb-5">Facial Room</h2>
+      <div class="ornament max-w-[14rem] mx-auto" aria-hidden="true"><span></span></div>
+    </div>
+
+    <div class="grid gap-6 max-w-xl mx-auto lg:max-w-4xl lg:grid-cols-2 lg:gap-8 items-start">
+
+      <article id="makeup" class="reveal bg-surface border border-cream/10 rounded-2xl p-7 sm:p-8" aria-labelledby="makeup-title">
+        <h3 id="makeup-title" class="font-display text-2xl font-semibold">Makeup</h3>
+        <div class="w-10 h-px bg-champagne/60 mt-3 mb-4" aria-hidden="true"></div>
+        <dl class="price-list">
+          <div><dt>Bridal Trial Makeup</dt><dd class="text-champagne font-semibold">$150</dd></div>
+          <div><dt>Everyday Natural Makeup</dt><dd class="text-champagne font-semibold">$65</dd></div>
+          <div><dt>Glam Makeup</dt><dd class="text-champagne font-semibold">$85<span aria-hidden="true">+</span><span class="sr-only"> and up</span></dd></div>
+          <div><dt>Eyebrow Wax</dt><dd class="text-champagne font-semibold">$20</dd></div>
+          <div><dt>Eyebrow Tint</dt><dd class="text-champagne font-semibold">$25</dd></div>
+          <div><dt>Eyebrow Lamination</dt><dd class="text-champagne font-semibold">$35</dd></div>
+        </dl>
+        <!-- Sits with the bridal item it applies to, not in a footer nobody reads -->
+        <p class="flex items-start gap-2.5 text-sm text-muted mt-6 pt-5 border-t border-cream/10">
+          <i class="fa-solid fa-circle-info text-champagne mt-0.5" aria-hidden="true"></i>
+          Deposit required for bridal bookings.
+        </p>
+      </article>
+
+      <article id="skincare" class="reveal bg-surface border border-cream/10 rounded-2xl p-7 sm:p-8" aria-labelledby="skincare-title">
+        <h3 id="skincare-title" class="font-display text-2xl font-semibold">Skincare</h3>
+        <div class="w-10 h-px bg-champagne/60 mt-3 mb-4" aria-hidden="true"></div>
+        <dl class="price-list">
+          <div><dt>Signature Facial</dt><dd class="text-champagne font-semibold">$75</dd></div>
+          <div><dt>Deep Cleanse Facial</dt><dd class="text-champagne font-semibold">$90</dd></div>
+          <div><dt>Glam Glow Facial</dt><dd class="text-champagne font-semibold">$110</dd></div>
+        </dl>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- HOURS + BOOKING -->
+<section id="booking" class="py-20 md:py-24 px-6 hairline bg-gradient-to-b from-plum/25 via-charcoal to-charcoal" aria-labelledby="booking-title">
+  <div class="max-w-5xl mx-auto">
+    <div class="reveal text-center mb-12">
+      <p class="text-xs font-semibold uppercase tracking-[0.2em] text-champagne mb-4">By Appointment</p>
+      <h2 id="booking-title" class="font-display text-4xl md:text-[2.75rem] font-semibold">Hours &amp; Booking</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+
+      <div class="reveal bg-surface border border-cream/10 rounded-2xl p-7 sm:p-8">
+        <h3 class="font-display text-2xl font-semibold">Hours</h3>
+        <div class="w-10 h-px bg-champagne/60 mt-3 mb-4" aria-hidden="true"></div>
+        <dl class="price-list">
+          <div><dt>Tuesday &ndash; Friday</dt><dd>9am &ndash; 6pm</dd></div>
+          <div><dt>Saturday</dt><dd>9am &ndash; 2pm</dd></div>
+        </dl>
+        <p class="text-sm text-muted mt-5">All services by appointment.</p>
+
+        <address class="not-italic text-sm mt-6 pt-5 border-t border-cream/10 space-y-3">
+          <p class="flex items-start gap-3">
+            <i class="fa-solid fa-location-dot text-champagne mt-1 w-4 text-center" aria-hidden="true"></i>
+            <span>194 Buckland Hills Dr, Manchester, CT 06042<br><span class="text-muted">Inside The Shoppes at Buckland Hills</span></span>
+          </p>
+          <p class="flex items-start gap-3">
+            <i class="fa-solid fa-phone text-champagne mt-1 w-4 text-center" aria-hidden="true"></i>
+            <a href="tel:+18602125175" class="hover:text-champagne transition-colors">(860) 212-5175</a>
+          </p>
+        </address>
+      </div>
+
+      <div class="reveal bg-surface border border-champagne/25 rounded-2xl p-7 sm:p-8 text-center flex flex-col justify-center shadow-lift">
+        <i class="fa-solid fa-calendar-check text-3xl text-champagne mb-5" aria-hidden="true"></i>
+        <h3 class="font-display text-2xl font-semibold mb-3">Book Your Appointment</h3>
+        <p class="text-muted mb-7 leading-relaxed">See real-time availability and reserve online, or call to book.</p>
+        <div class="flex flex-col gap-3">
+          <a href="https://square.site/appointments/buyer/widget/jkbghbz47zzhy5/LY6PPE4566P9R"
+             target="_blank" rel="noopener"
+             class="btn-hover inline-flex items-center justify-center gap-2 bg-champagne text-charcoal font-bold uppercase tracking-wide text-sm px-8 py-4 rounded-full">
+            Book Now
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i>
+            <span class="sr-only">(opens in a new tab)</span>
+          </a>
+          <a href="tel:+18602125175" class="btn-hover border border-cream/25 text-cream font-bold uppercase tracking-wide text-sm px-8 py-4 rounded-full hover:border-champagne hover:text-champagne">Call (860) 212-5175</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER — same as index.html -->
+<footer class="hairline py-14 px-6 bg-charcoal">
+  <div class="max-w-6xl mx-auto grid sm:grid-cols-2 md:grid-cols-[1.5fr_1fr_1fr] gap-10 pb-10 border-b border-cream/10">
+    <div class="sm:col-span-2 md:col-span-1">
+      <img src="logo-lockup.webp" alt="CreativeFaces — Salon, Makeup, Bar"
+           width="380" height="123" class="w-full max-w-[380px] h-auto -ml-1 mb-5"
+           loading="lazy" decoding="async">
+      <p class="text-muted text-sm leading-relaxed">Inside The Shoppes at Buckland Hills — Manchester, CT.</p>
+    </div>
+
+    <nav aria-label="Footer">
+      <h2 class="text-xs font-semibold uppercase tracking-wide text-muted mb-4">Quick Links</h2>
+      <div class="flex flex-col gap-2.5 text-sm">
+        <a href="index.html#services" class="hover:text-champagne transition-colors">Services</a>
+        <a href="menu.html" class="text-champagne" aria-current="page">Menu &amp; Prices</a>
+        <a href="index.html#boutique" class="hover:text-champagne transition-colors">Boutique</a>
+        <a href="index.html#about" class="hover:text-champagne transition-colors">About</a>
+        <a href="index.html#reviews" class="hover:text-champagne transition-colors">Reviews</a>
+        <a href="index.html#location" class="hover:text-champagne transition-colors">Visit</a>
+        <a href="#booking" class="hover:text-champagne transition-colors">Book</a>
+      </div>
+    </nav>
+
+    <div>
+      <h2 class="text-xs font-semibold uppercase tracking-wide text-muted mb-4">Contact</h2>
+      <a href="tel:+18602125175" class="text-sm hover:text-champagne transition-colors block mb-2">(860) 212-5175</a>
+      <p class="text-sm text-muted mb-4">Tue&ndash;Fri 9am&ndash;6pm · Sat 9am&ndash;2pm</p>
+      <!-- TODO: swap the two href="#" placeholders below for the real profile URLs (same as index.html) -->
+      <div class="flex gap-2">
+        <a href="#" class="w-11 h-11 grid place-items-center rounded-full border border-cream/15 hover:border-champagne hover:text-champagne transition-colors" aria-label="CreativeFaces on Instagram">
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="#" class="w-11 h-11 grid place-items-center rounded-full border border-cream/15 hover:border-champagne hover:text-champagne transition-colors" aria-label="CreativeFaces on Facebook">
+          <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-6xl mx-auto pt-6 flex flex-wrap justify-between gap-2 text-xs text-muted">
+    <span>&copy; 2026 CreativeFaces Salon and Makeup Bar.</span>
+    <span>194 Buckland Hills Dr, Manchester, CT 06042</span>
+  </div>
+</footer>
+
+<!-- MOBILE ACTION BAR -->
+<div class="md:hidden h-20" aria-hidden="true"></div>
+<div class="md:hidden fixed bottom-0 inset-x-0 z-40 bg-charcoal/95 backdrop-blur border-t border-cream/10 px-4 pt-3"
+     style="padding-bottom:calc(0.75rem + env(safe-area-inset-bottom));">
+  <div class="flex gap-3">
+    <a href="tel:+18602125175" class="flex-1 min-h-[48px] flex items-center justify-center gap-2 border border-cream/25 text-cream font-bold uppercase tracking-wide text-xs rounded-full">
+      <i class="fa-solid fa-phone" aria-hidden="true"></i> Call
+    </a>
+    <a href="#booking" class="flex-1 min-h-[48px] flex items-center justify-center gap-2 bg-champagne text-charcoal font-bold uppercase tracking-wide text-xs rounded-full">
+      <i class="fa-solid fa-calendar-check" aria-hidden="true"></i> Book
+    </a>
+  </div>
+</div>
+
+<script src="site.js"></script>
+</body>
+</html>

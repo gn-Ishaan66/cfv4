@@ -1,0 +1,107 @@
+/* Shared by every page. */
+html{
+  scroll-behavior:smooth;
+  /* WCAG 2.2 "Focus Not Obscured" — the sticky header is 5rem tall,
+     so anchored targets and focused elements must clear it. */
+  scroll-padding-top:6rem;
+}
+
+/* --- Focus: visible on every interactive element, in every state --- */
+:where(a,button,input,select,textarea,summary,[tabindex]):focus-visible{
+  outline:2px solid #DDC086;
+  outline-offset:3px;
+  border-radius:6px;
+}
+.skip-link{
+  position:absolute; left:1rem; top:-100%;
+  background:#DDC086; color:#19171A;
+  padding:.75rem 1.25rem; border-radius:9999px;
+  font-weight:700; font-size:.8rem; letter-spacing:.05em;
+  text-transform:uppercase; z-index:100;
+  transition:top .18s ease;
+}
+.skip-link:focus{ top:1rem; }
+
+/* --- Atmosphere --- */
+.glow{
+  background:
+    radial-gradient(ellipse 55% 45% at 22% 8%,  rgba(221,192,134,0.15), transparent 68%),
+    radial-gradient(ellipse 50% 50% at 82% 18%, rgba(199,154,139,0.13), transparent 70%),
+    radial-gradient(ellipse 70% 55% at 50% 92%, rgba(110,58,82,0.20),  transparent 72%);
+}
+.hairline{ border-top:1px solid rgba(245,239,230,0.09); }
+
+/* --- Photo slots: styled so a missing image reads as intentional
+       texture, not as a broken box. Drop a real file at the src path
+       and it simply covers this. --- */
+.photo{
+  background:
+    linear-gradient(140deg, rgba(221,192,134,0.22), rgba(110,58,82,0.35) 55%, rgba(199,154,139,0.20)),
+    #221F23;
+  position:relative; overflow:hidden;
+}
+.photo::after{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(to top, rgba(25,23,26,0.55), transparent 55%);
+}
+.photo img{ width:100%; height:100%; object-fit:cover; display:block; position:relative; z-index:1; }
+/* An image that fails to load is removed by the script below and the slot is
+   marked .is-empty, so it brands itself instead of showing a broken-image icon.
+   Not :empty — the indentation around the <img> leaves whitespace text nodes
+   behind, and :empty never matches an element that still has text nodes.
+   The url() resolves against THIS stylesheet (assets/), not the page. */
+.photo.is-empty::before{
+  content:""; position:absolute; inset:0; z-index:1;
+  background:url("logo-emblem.webp") center / 36% no-repeat;
+  opacity:.3;
+}
+
+/* --- Price lists (menu page) and hours ---
+   Each row is <div><dt>name</dt><dd>price</dd></div> inside a <dl>. A <dl> may
+   not contain a <span>, so the dotted leader is dt::after, which also keeps it
+   out of the accessibility tree: a screen reader hears "Silk Press, $75". */
+.price-list > div{ display:flex; align-items:baseline; gap:.5rem; padding:.55rem 0; }
+.price-list dt{ display:flex; align-items:baseline; flex:1; min-width:0; gap:.5rem; }
+.price-list dt::after{
+  content:""; flex:1; min-width:1rem;
+  border-bottom:1px dotted rgba(221,192,134,0.38);
+  transform:translateY(-.28em);
+}
+.price-list dd{ margin:0; white-space:nowrap; font-variant-numeric:tabular-nums; }
+
+/* Rule with a centre diamond — the divider from the printed menus */
+.ornament{ display:flex; align-items:center; gap:.7rem; color:#DDC086; }
+.ornament::before, .ornament::after{ content:""; flex:1; height:1px; }
+.ornament::before{ background:linear-gradient(to right, transparent, rgba(221,192,134,0.55)); }
+.ornament::after { background:linear-gradient(to left,  transparent, rgba(221,192,134,0.55)); }
+.ornament > span{ width:6px; height:6px; transform:rotate(45deg); background:currentColor; flex:none; }
+
+/* --- Interaction: movement paired with depth, never movement alone --- */
+.card-hover{ transition:transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
+.card-hover:hover{
+  transform:translateY(-4px);
+  border-color:rgba(221,192,134,0.45);
+  box-shadow:0 18px 40px -22px rgba(0,0,0,0.95);
+}
+.btn-hover{ transition:transform .18s ease, box-shadow .18s ease, background-color .18s ease, border-color .18s ease, color .18s ease; }
+.btn-hover:hover{ transform:translateY(-2px); box-shadow:0 14px 34px -18px rgba(221,192,134,0.55); }
+
+/* --- Scroll reveal (standard tier: 300-450ms, gentle offset) --- */
+.reveal{ opacity:0; transform:translateY(18px); transition:opacity .55s ease, transform .55s cubic-bezier(.22,.61,.36,1); }
+.reveal.is-visible{ opacity:1; transform:none; }
+
+#mobileMenu{ transition:max-height .3s ease; overflow:hidden; }
+::selection{ background:#DDC086; color:#19171A; }
+
+/* --- Reduced motion: no scroll animation, no transforms, final state --- */
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto; }
+  *, *::before, *::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+    scroll-behavior:auto !important;
+  }
+  .reveal{ opacity:1; transform:none; }
+  .card-hover:hover, .btn-hover:hover{ transform:none; }
+}
