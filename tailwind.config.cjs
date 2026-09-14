@@ -1,6 +1,8 @@
-/* Shared by every page. Must load AFTER the Tailwind CDN script, which reads
-   window.tailwind.config when it generates classes. */
-tailwind.config = {
+/* Build-time Tailwind config. `npm run build` compiles tailwind.css from the
+   classes actually used in the .html files, replacing the 407KB play-CDN
+   script that used to generate them in the browser on every visit. */
+module.exports = {
+  content: ['./*.html'],
   theme: {
     extend: {
       colors: {
@@ -28,6 +30,6 @@ tailwind.config = {
         lift: '0 18px 40px -22px rgba(0,0,0,0.95)',
         glow: '0 14px 34px -18px rgba(221,192,134,0.55)',
       },
-    }
-  }
-}
+    },
+  },
+};

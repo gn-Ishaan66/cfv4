@@ -1,4 +1,12 @@
 /* Shared by every page. */
+
+/* Inline SVG icons, sized like the webfont glyphs they replace: 1em square,
+   inheriting colour, sitting on the text baseline. :where() gives this zero
+   specificity so a utility class (w-4, h-5) still overrides it. */
+:where(.icon){
+  width:1em; height:1em; fill:currentColor;
+  display:inline-block; vertical-align:-0.125em; flex:none;
+}
 html{
   scroll-behavior:smooth;
   /* WCAG 2.2 "Focus Not Obscured" — the sticky header is 5rem tall,

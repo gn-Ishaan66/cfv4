@@ -11,7 +11,7 @@
     mobileMenu.style.maxHeight = open ? mobileMenu.scrollHeight + 'px' : '0px';
     menuBtn.setAttribute('aria-expanded', String(open));
     menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-    menuIcon.className = open ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+    menuIcon.firstElementChild.setAttribute('href', open ? '#i-xmark' : '#i-bars');
   }
 
   menuBtn.addEventListener('click', function () {
