@@ -12,7 +12,8 @@ Price forms:
 import re
 from pathlib import Path
 
-MENU = Path(r"C:\Users\ishaa\Downloads\creativefaces-site\menu.html")
+# Resolved relative to this script, so moving the project does not break it.
+MENU = Path(__file__).resolve().parent.parent / "menu.html"
 
 # --- from the salon's printed Hair Room menu -------------------------------
 HAIR_SERVICES = [("Silk Press", 75), ("Cut, Blow &amp; Style", 55), ("Color", "95+")]
