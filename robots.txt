@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gn-ishaan66.github.io/cfv4/sitemap.xml
