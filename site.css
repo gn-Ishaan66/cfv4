@@ -86,10 +86,6 @@ html{
 .btn-hover{ transition:transform .18s ease, box-shadow .18s ease, background-color .18s ease, border-color .18s ease, color .18s ease; }
 .btn-hover:hover{ transform:translateY(-2px); box-shadow:0 14px 34px -18px rgba(221,192,134,0.55); }
 
-/* --- Scroll reveal (standard tier: 300-450ms, gentle offset) --- */
-.reveal{ opacity:0; transform:translateY(18px); transition:opacity .55s ease, transform .55s cubic-bezier(.22,.61,.36,1); }
-.reveal.is-visible{ opacity:1; transform:none; }
-
 #mobileMenu{ transition:max-height .3s ease; overflow:hidden; }
 ::selection{ background:#DDC086; color:#19171A; }
 
@@ -102,7 +98,6 @@ html{
     transition-duration:.01ms !important;
     scroll-behavior:auto !important;
   }
-  .reveal{ opacity:1; transform:none; }
   .card-hover:hover, .btn-hover:hover{ transform:none; }
 }
 

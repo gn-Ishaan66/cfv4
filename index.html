@@ -128,19 +128,14 @@
 <section id="home" class="glow pt-16 pb-20 md:pt-24 md:pb-28 px-6" aria-labelledby="hero-title">
   <div class="max-w-6xl mx-auto grid lg:grid-cols-[1.05fr_.95fr] gap-14 lg:gap-16 items-center">
 
-    <div class="reveal text-center lg:text-left">
-      <p class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-champagne mb-6 border border-champagne/30 rounded-full px-4 py-2">
-        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-        Manchester, CT · The Shoppes at Buckland Hills
-      </p>
-
+    <div class="text-center lg:text-left">
       <h1 id="hero-title" class="font-display text-[2.6rem] sm:text-6xl lg:text-[4.1rem] leading-[1.06] mb-6 text-balance">
-        Elevate Your <span class="italic text-champagne">Style &amp; Confidence.</span>
+        Hair, beauty and gowns under one roof.
       </h1>
 
       <p class="text-muted text-lg leading-relaxed max-w-xl mx-auto lg:mx-0 mb-9">
-        Full-service hair, beauty, and boutique fashion under one roof — where a wedding-day
-        look and a prom dress fitting feel equally at home.
+        A full-service salon and makeup bar in Manchester, CT, with a boutique of prom,
+        formal and wedding gowns. Cut and color on a Tuesday, a wedding-day look on Saturday.
       </p>
 
       <div class="flex flex-wrap gap-4 justify-center lg:justify-start mb-10">
@@ -148,7 +143,6 @@
         <a href="#services" class="btn-hover border border-cream/25 text-cream font-semibold text-sm uppercase tracking-wide px-8 py-4 rounded-full hover:border-champagne hover:text-champagne">Explore Services</a>
       </div>
 
-      <!-- Trust strip: rating + hours + one-stop promise, above the fold -->
       <dl class="flex flex-wrap gap-x-8 gap-y-4 justify-center lg:justify-start text-sm">
         <div class="flex items-center gap-2">
           <span class="text-champagne" role="img" aria-label="Rated 4.6 out of 5 stars">
@@ -159,19 +153,24 @@
             <i class="fa-solid fa-star-half-stroke text-xs" aria-hidden="true"></i>
           </span>
           <dt class="sr-only">Google rating</dt>
-          <dd class="text-muted"><span class="text-cream font-semibold">4.6</span> · 58 Google reviews</dd>
+          <dd class="text-muted"><span class="text-cream font-semibold">4.6</span> &middot; 58 Google reviews</dd>
         </div>
         <div class="flex items-center gap-2">
           <i class="fa-solid fa-clock text-champagne text-xs" aria-hidden="true"></i>
           <dt class="sr-only">Hours</dt>
-          <dd class="text-muted">Tue&ndash;Fri 9am&ndash;6pm · Sat 9am&ndash;2pm</dd>
+          <dd class="text-muted">Tue&ndash;Fri 9am&ndash;6pm &middot; Sat 9am&ndash;2pm</dd>
+        </div>
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-location-dot text-champagne text-xs" aria-hidden="true"></i>
+          <dt class="sr-only">Location</dt>
+          <dd class="text-muted">The Shoppes at Buckland Hills</dd>
         </div>
       </dl>
     </div>
 
     <!-- Editorial image pair. Real photos drop straight into these src paths;
          until then the .photo texture beneath shows through. -->
-    <div class="reveal grid grid-cols-2 gap-4 sm:gap-5">
+    <div class="grid grid-cols-2 gap-4 sm:gap-5">
       <div class="photo aspect-[3/4] rounded-2xl mt-8">
         <img src="salon-styling.jpg" alt="A stylist finishing a blowout at CreativeFaces in Manchester, Connecticut" loading="lazy" decoding="async" width="600" height="800">
       </div>
@@ -186,58 +185,38 @@
 <!-- SERVICES -->
 <section id="services" class="py-20 md:py-28 px-6 hairline bg-surface" aria-labelledby="services-title">
   <div class="max-w-6xl mx-auto">
-    <div class="reveal text-center max-w-xl mx-auto mb-14">
+    <div class="text-center max-w-xl mx-auto mb-14">
       <p class="text-xs font-semibold uppercase tracking-[0.2em] text-champagne mb-4">Services</p>
       <h2 id="services-title" class="font-display text-4xl md:text-[2.75rem] font-semibold">Everything, In One Place</h2>
     </div>
 
-    <ul class="grid md:grid-cols-3 gap-6 lg:gap-8 list-none p-0">
-      <li class="reveal card-hover bg-charcoal border border-cream/10 rounded-2xl p-8">
-        <span class="w-12 h-12 grid place-items-center rounded-full bg-champagne/12 border border-champagne/25 mb-6">
-          <i class="fa-solid fa-scissors text-champagne text-lg" aria-hidden="true"></i>
-        </span>
-        <h3 class="font-display text-xl font-semibold mb-4">Hair Care &amp; Styling</h3>
-        <ul class="text-sm text-muted space-y-2.5">
-          <li>Cuts &amp; Color</li>
-          <li>Blowouts</li>
-          <li>Hair Extensions</li>
-          <li>Micro Braids &amp; Crochet</li>
-          <li>Hair Restoration</li>
-          <li>Hair Infusions</li>
-          <li>Men's &amp; Kids' Cuts</li>
-        </ul>
+    <ol class="max-w-4xl mx-auto border-t border-cream/10 list-none p-0">
+      <li class="grid md:grid-cols-[3rem_1fr] gap-x-8 gap-y-2 py-8 border-b border-cream/10">
+        <p class="font-display text-champagne text-lg" aria-hidden="true">01</p>
+        <div>
+          <h3 class="font-display text-2xl md:text-3xl font-semibold mb-3">Hair Care &amp; Styling</h3>
+          <p class="text-muted leading-relaxed">Cuts and color, blowouts, extensions, micro braids and crochet, hair restoration, hair infusions, men's and kids' cuts.</p>
+        </div>
       </li>
 
-      <li class="reveal card-hover bg-charcoal border border-cream/10 rounded-2xl p-8">
-        <span class="w-12 h-12 grid place-items-center rounded-full bg-rosegold/12 border border-rosegold/25 mb-6">
-          <i class="fa-solid fa-wand-magic-sparkles text-rosegold text-lg" aria-hidden="true"></i>
-        </span>
-        <h3 class="font-display text-xl font-semibold mb-4">Beauty &amp; Glam</h3>
-        <ul class="text-sm text-muted space-y-2.5">
-          <li>Skincare</li>
-          <li>Makeup Application</li>
-          <li>Eyelash Extensions</li>
-          <li>Wedding &amp; Event Updos</li>
-          <li>Nails</li>
-        </ul>
+      <li class="grid md:grid-cols-[3rem_1fr] gap-x-8 gap-y-2 py-8 border-b border-cream/10">
+        <p class="font-display text-champagne text-lg" aria-hidden="true">02</p>
+        <div>
+          <h3 class="font-display text-2xl md:text-3xl font-semibold mb-3">Beauty &amp; Glam</h3>
+          <p class="text-muted leading-relaxed">Skincare, makeup application, eyelash extensions, wedding and event updos, nails.</p>
+        </div>
       </li>
 
-      <li class="reveal card-hover bg-charcoal border border-cream/10 rounded-2xl p-8">
-        <span class="w-12 h-12 grid place-items-center rounded-full bg-champagne/12 border border-champagne/25 mb-6">
-          <i class="fa-solid fa-shirt text-champagne text-lg" aria-hidden="true"></i>
-        </span>
-        <h3 class="font-display text-xl font-semibold mb-4">Boutique &amp; Apparel</h3>
-        <ul class="text-sm text-muted space-y-2.5">
-          <li>Prom Dresses</li>
-          <li>Formal &amp; Wedding Wear</li>
-          <li>Fashion Accessories</li>
-          <li>Complimentary Styling Help</li>
-          <li>On-Site Tailoring</li>
-        </ul>
+      <li class="grid md:grid-cols-[3rem_1fr] gap-x-8 gap-y-2 py-8 border-b border-cream/10">
+        <p class="font-display text-champagne text-lg" aria-hidden="true">03</p>
+        <div>
+          <h3 class="font-display text-2xl md:text-3xl font-semibold mb-3">Boutique &amp; Apparel</h3>
+          <p class="text-muted leading-relaxed">Prom dresses, formal and wedding wear, fashion accessories, complimentary styling help, on-site tailoring.</p>
+        </div>
       </li>
-    </ul>
+    </ol>
 
-    <div class="reveal text-center mt-12">
+    <div class="text-center mt-12">
       <a href="menu.html" class="btn-hover inline-flex items-center gap-2 border border-champagne/40 text-champagne font-semibold text-sm uppercase tracking-wide px-7 py-3.5 rounded-full hover:border-champagne">
         See the full menu &amp; prices
         <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
@@ -249,7 +228,7 @@
 <!-- BOUTIQUE SPOTLIGHT -->
 <section id="boutique" class="py-20 md:py-28 px-6 hairline" aria-labelledby="boutique-title">
   <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 md:gap-14 items-center">
-    <div class="reveal grid grid-cols-2 gap-4">
+    <div class="grid grid-cols-2 gap-4">
       <div class="photo aspect-[3/4] rounded-2xl">
         <img src="prom-dress-fitting.jpg" alt="A client being fitted for a prom dress in the boutique" loading="lazy" decoding="async" width="600" height="800">
       </div>
@@ -258,12 +237,12 @@
       </div>
     </div>
 
-    <div class="reveal">
+    <div>
       <p class="text-xs font-semibold uppercase tracking-[0.2em] text-champagne mb-4">Boutique Spotlight</p>
       <h2 id="boutique-title" class="font-display text-4xl md:text-[2.75rem] font-semibold mb-6 text-balance">Find &ldquo;The Dress,&rdquo; Not Just A Dress.</h2>
       <p class="text-muted leading-relaxed mb-5">
-        A huge selection of prom, formal, and wedding gowns — with a personal touch that's rare
-        to find anywhere else. Every fitting includes styling help, and complimentary jewelry to
+        A huge selection of prom, formal and wedding gowns, with a personal touch that's rare to
+        find anywhere else. Every fitting includes styling help and complimentary jewelry to
         complete the look.
       </p>
       <p class="text-muted leading-relaxed mb-8">
@@ -280,16 +259,15 @@
 
 <!-- ABOUT -->
 <section id="about" class="py-20 md:py-28 px-6 hairline bg-surface" aria-labelledby="about-title">
-  <div class="max-w-4xl mx-auto text-center reveal">
+  <div class="max-w-4xl mx-auto text-center">
     <img src="logo-emblem.webp" alt="" width="96" height="96"
          class="w-20 h-20 md:w-24 md:h-24 mx-auto mb-6" loading="lazy" decoding="async">
     <p class="text-xs font-semibold uppercase tracking-[0.2em] text-champagne mb-4">Why Choose Us</p>
     <h2 id="about-title" class="font-display text-4xl md:text-[2.75rem] font-semibold mb-6">One Stop. Every Occasion.</h2>
     <p class="text-muted text-lg leading-relaxed max-w-2xl mx-auto mb-12">
       Whether it's a wedding day, a prom night, or just a much-needed cut and color, CreativeFaces
-      brings hair, beauty, and boutique fashion together under one roof — led by Kathleen, whose
-      personal touch turns a simple visit into an experience clients come back to tell their
-      friends about.
+      brings hair, beauty and boutique fashion together under one roof, led by Kathleen, whose
+      personal touch turns a simple visit into something clients tell their friends about.
     </p>
 
     <dl class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto">
@@ -312,7 +290,7 @@
 <!-- REVIEWS -->
 <section id="reviews" class="py-20 md:py-28 px-6 hairline" aria-labelledby="reviews-title">
   <div class="max-w-6xl mx-auto">
-    <div class="reveal text-center max-w-xl mx-auto mb-14">
+    <div class="text-center max-w-xl mx-auto mb-14">
       <p class="text-xs font-semibold uppercase tracking-[0.2em] text-champagne mb-4">Client Love</p>
       <h2 id="reviews-title" class="font-display text-4xl md:text-[2.75rem] font-semibold">What Clients Say</h2>
     </div>
@@ -322,33 +300,33 @@
          or attaching a real name or photo. Do not ship this note as visible copy. -->
     <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 list-none p-0">
 
-      <li class="reveal card-hover bg-surface rounded-2xl p-7 border border-cream/10">
+      <li class="card-hover bg-surface rounded-2xl p-7 border border-cream/10">
         <figure class="h-full flex flex-col">
           <div class="text-champagne mb-4" role="img" aria-label="5 out of 5 stars">
             <i class="fa-solid fa-star text-sm" aria-hidden="true"></i><i class="fa-solid fa-star text-sm" aria-hidden="true"></i><i class="fa-solid fa-star text-sm" aria-hidden="true"></i><i class="fa-solid fa-star text-sm" aria-hidden="true"></i><i class="fa-solid fa-star text-sm" aria-hidden="true"></i>
           </div>
           <blockquote class="text-[.95rem] leading-relaxed text-cream/85 flex-1">
-            Kathleen did my wedding hair and makeup and was amazing — warm, welcoming, and
+            Kathleen did my wedding hair and makeup and was amazing: warm, welcoming and
             fantastic at her craft.
           </blockquote>
           <figcaption class="text-xs text-muted mt-5 font-semibold">Google review, paraphrased</figcaption>
         </figure>
       </li>
 
-      <li class="reveal card-hover bg-surface rounded-2xl p-7 border border-cream/10">
+      <li class="card-hover bg-surface rounded-2xl p-7 border border-cream/10">
         <figure class="h-full flex flex-col">
           <div class="text-champagne mb-4" role="img" aria-label="5 out of 5 stars">
             <i class="fa-solid fa-star text-sm" aria-hidden="true"></i><i class="fa-solid fa-star text-sm" aria-hidden="true"></i><i class="fa-solid fa-star text-sm" aria-hidden="true"></i><i class="fa-solid fa-star text-sm" aria-hidden="true"></i><i class="fa-solid fa-star text-sm" aria-hidden="true"></i>
           </div>
           <blockquote class="text-[.95rem] leading-relaxed text-cream/85 flex-1">
-            A huge selection of prom dresses — my daughter found the perfect one, and the service
+            A huge selection of prom dresses. My daughter found the perfect one, and the service
             was out of this world.
           </blockquote>
           <figcaption class="text-xs text-muted mt-5 font-semibold">Google review, paraphrased</figcaption>
         </figure>
       </li>
 
-      <li class="reveal card-hover bg-surface rounded-2xl p-7 border border-cream/10">
+      <li class="card-hover bg-surface rounded-2xl p-7 border border-cream/10">
         <figure class="h-full flex flex-col">
           <div class="text-champagne mb-4" role="img" aria-label="5 out of 5 stars">
             <i class="fa-solid fa-star text-sm" aria-hidden="true"></i><i class="fa-solid fa-star text-sm" aria-hidden="true"></i><i class="fa-solid fa-star text-sm" aria-hidden="true"></i><i class="fa-solid fa-star text-sm" aria-hidden="true"></i><i class="fa-solid fa-star text-sm" aria-hidden="true"></i>
@@ -361,35 +339,35 @@
         </figure>
       </li>
 
-      <li class="reveal card-hover bg-surface rounded-2xl p-7 border border-cream/10">
+      <li class="card-hover bg-surface rounded-2xl p-7 border border-cream/10">
         <figure class="h-full flex flex-col">
           <div class="text-champagne mb-4" role="img" aria-label="5 out of 5 stars">
             <i class="fa-solid fa-star text-sm" aria-hidden="true"></i><i class="fa-solid fa-star text-sm" aria-hidden="true"></i><i class="fa-solid fa-star text-sm" aria-hidden="true"></i><i class="fa-solid fa-star text-sm" aria-hidden="true"></i><i class="fa-solid fa-star text-sm" aria-hidden="true"></i>
           </div>
           <blockquote class="text-[.95rem] leading-relaxed text-cream/85 flex-1">
-            Found this spot by accident while prom shopping — Kathleen even styled a quick up-do to
+            Found this spot by accident while prom shopping. Kathleen even styled a quick up-do to
             show how the earrings would look.
           </blockquote>
           <figcaption class="text-xs text-muted mt-5 font-semibold">Google review, paraphrased</figcaption>
         </figure>
       </li>
 
-      <li class="reveal card-hover bg-surface rounded-2xl p-7 border border-cream/10">
+      <li class="card-hover bg-surface rounded-2xl p-7 border border-cream/10">
         <figure class="h-full flex flex-col">
           <div class="text-champagne mb-4" role="img" aria-label="5 out of 5 stars">
             <i class="fa-solid fa-star text-sm" aria-hidden="true"></i><i class="fa-solid fa-star text-sm" aria-hidden="true"></i><i class="fa-solid fa-star text-sm" aria-hidden="true"></i><i class="fa-solid fa-star text-sm" aria-hidden="true"></i><i class="fa-solid fa-star text-sm" aria-hidden="true"></i>
           </div>
           <blockquote class="text-[.95rem] leading-relaxed text-cream/85 flex-1">
-            Walked in looking for a wedding dress, and Kathleen dressed me head to toe — gloves,
-            tiara, and veil included.
+            Walked in looking for a wedding dress, and Kathleen dressed me head to toe: gloves,
+            tiara and veil included.
           </blockquote>
           <figcaption class="text-xs text-muted mt-5 font-semibold">Google review, paraphrased</figcaption>
         </figure>
       </li>
 
-      <li class="reveal bg-champagne/10 border border-champagne/35 rounded-2xl p-7 flex flex-col justify-center">
-        <p class="font-display text-2xl italic mb-3 text-champagne">Come see why.</p>
-        <p class="text-sm text-muted mb-6 leading-relaxed">Booking fills fastest around prom and wedding season — call ahead for gown fittings.</p>
+      <li class="bg-champagne/10 border border-champagne/35 rounded-2xl p-7 flex flex-col justify-center">
+        <p class="font-display text-2xl mb-3 text-champagne">Come see why.</p>
+        <p class="text-sm text-muted mb-6 leading-relaxed">Booking fills fastest around prom and wedding season. Call ahead for gown fittings.</p>
         <a href="tel:+18602125175" class="btn-hover inline-flex items-center gap-2 bg-champagne text-charcoal font-bold uppercase tracking-wide text-xs px-6 py-3.5 rounded-full self-start">
           <i class="fa-solid fa-phone" aria-hidden="true"></i>
           Call (860) 212-5175
@@ -402,11 +380,11 @@
 
 <!-- BOOKING — the conversion moment, so it gets the one warm-lit block on the page -->
 <section id="booking" class="py-20 md:py-28 px-6 hairline bg-gradient-to-b from-plum/25 via-charcoal to-charcoal" aria-labelledby="booking-title">
-  <div class="max-w-2xl mx-auto text-center reveal">
+  <div class="max-w-2xl mx-auto text-center">
     <p class="text-xs font-semibold uppercase tracking-[0.2em] text-champagne mb-4">Book Appointment</p>
     <h2 id="booking-title" class="font-display text-4xl md:text-[2.75rem] font-semibold mb-5">Reserve Your Spot</h2>
     <p class="text-muted mb-10 leading-relaxed">
-      Booking is live — see real-time availability and reserve your appointment directly.
+      Booking is live. See real-time availability and reserve your appointment directly.
     </p>
 
     <div class="bg-surface border border-champagne/25 rounded-3xl p-8 sm:p-10 shadow-lift">
@@ -437,7 +415,7 @@
 <section id="location" class="py-20 md:py-28 px-6 hairline bg-surface" aria-labelledby="location-title">
   <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 md:gap-14">
 
-    <div class="reveal">
+    <div>
       <p class="text-xs font-semibold uppercase tracking-[0.2em] text-champagne mb-4">Visit Us</p>
       <h2 id="location-title" class="font-display text-4xl md:text-[2.75rem] font-semibold mb-8">Find Us at Buckland Hills</h2>
 
@@ -446,7 +424,7 @@
           <i class="fa-solid fa-location-dot text-champagne mt-1 w-4 text-center" aria-hidden="true"></i>
           <div>
             <p class="font-semibold text-base">194 Buckland Hills Dr</p>
-            <p class="text-muted">Manchester, CT 06042 — inside The Shoppes at Buckland Hills</p>
+            <p class="text-muted">Manchester, CT 06042, inside The Shoppes at Buckland Hills</p>
             <a href="https://www.google.com/maps/search/?api=1&amp;query=194+Buckland+Hills+Dr+Manchester+CT+06042"
                target="_blank" rel="noopener"
                class="inline-flex items-center gap-2 text-champagne text-xs font-semibold uppercase tracking-wide mt-2 hover:underline">
@@ -481,13 +459,13 @@
       </div>
     </div>
 
-    <div class="reveal flex flex-col justify-center">
+    <div class="flex flex-col justify-center">
       <div class="bg-charcoal border border-cream/10 rounded-2xl p-8 sm:p-10 text-center shadow-lift">
         <i class="fa-solid fa-wand-magic-sparkles text-champagne text-3xl mb-5" aria-hidden="true"></i>
         <h3 class="font-display text-2xl font-semibold mb-3">Ready to Book?</h3>
         <p class="text-muted mb-8 leading-relaxed">
-          Reserve online, or call directly to schedule your hair, beauty, or boutique appointment
-          with Kathleen and the team.
+          Reserve online, or call to schedule your hair, beauty or boutique appointment with
+          Kathleen and the team.
         </p>
         <div class="flex flex-col gap-3">
           <a href="#booking" class="btn-hover bg-champagne text-charcoal font-bold uppercase tracking-wide text-sm px-8 py-4 rounded-full">Book Online</a>
@@ -509,7 +487,7 @@
       <img src="logo-lockup.webp" alt="CreativeFaces — Salon, Makeup, Bar"
            width="380" height="123" class="w-full max-w-[380px] h-auto -ml-1 mb-5"
            loading="lazy" decoding="async">
-      <p class="text-muted text-sm leading-relaxed">Inside The Shoppes at Buckland Hills — Manchester, CT.</p>
+      <p class="text-muted text-sm leading-relaxed">Inside The Shoppes at Buckland Hills, Manchester, CT.</p>
     </div>
 
     <nav aria-label="Footer">
