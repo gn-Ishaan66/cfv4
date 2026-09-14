@@ -20,10 +20,10 @@ EXTENSIONS    = [("Tape-In", "200+"), ("Sew-In", "180+"), ("Micro Links", "220+"
 
 # --- from the supplied price tables ----------------------------------------
 BRAIDS = [
-    ("Box Braids", (130, 255)),
+    ("Box Braids", "180+"),                # printed menu price, kept over the table's $130-255
     ("Knotless Box Braids", (145, 350)),
     ("Boho Knotless Braids", (185, 400)),
-    ("Goddess Braids (with curls)", (140, 365)),
+    ("Goddess Braids", "175+"),            # printed menu price, kept over the table's $140-365
     ("Feed-In / Stitch Braids", (65, 200)),
     ("Cornrows (no extensions)", (30, 85)),
     ("Cornrows (with extensions)", (45, 160)),
