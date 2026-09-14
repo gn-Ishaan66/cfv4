@@ -43,9 +43,9 @@ Upload photos with those exact names and they appear automatically. Until then t
 show a branded gold panel instead of a broken image, so the site still looks finished.
 Portrait photos suit the slots best — roughly 3:4, for example 900×1200.
 
-**Prices for services not on the printed menus.** Eyelash extensions, nails, crochet braids,
-hair restoration, hair infusions, men's and kids' cuts, and updos appear on the homepage but
-have no prices on the menu page yet.
+**Prices for the remaining services.** Eyelash extensions, nails, hair restoration, hair
+infusions, men's and kids' haircuts, and wedding/event updos appear on the homepage but still
+have no prices on the menu page.
 
 ## If you move to a custom domain
 
@@ -63,6 +63,17 @@ address starting with `https://`, or the logo preview card won't show when the s
 - **Hours appear in four places** in `index.html` (hero, Visit section, footer, and the
   business-details block Google reads) and twice in `menu.html` (Hours box, footer).
   Currently: Tuesday–Friday 9am–6pm, Saturday 9am–2pm.
-- **Prices** are in `menu.html` only.
+- **Prices live in `scripts/build_menu.py`**, not in the HTML. That script holds every
+  price once and regenerates the Hair Room section of `menu.html`:
+
+  ```
+  python scripts/build_menu.py
+  ```
+
+  Edit a price there and re-run it. Editing `menu.html` by hand works too, but the next run
+  of the script overwrites the Hair Room section. Makeup, Skincare and Hours are still edited
+  directly in `menu.html`.
+- Braid, twist, loc and crochet prices are shown as ranges; the printed-menu services use a
+  `+` starting price. Both styles are supported by the script.
 - The star rating and review count on the homepage are deliberately plain text. Google's
   rules don't allow a business to publish its own rating as listing data.

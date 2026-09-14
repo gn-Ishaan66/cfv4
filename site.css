@@ -63,7 +63,7 @@ html{
 .price-list > div{ display:flex; align-items:baseline; gap:.5rem; padding:.55rem 0; }
 .price-list dt{ display:flex; align-items:baseline; flex:1; min-width:0; gap:.5rem; }
 .price-list dt::after{
-  content:""; flex:1; min-width:1rem;
+  content:""; flex:1; min-width:0;      /* shrinks away before forcing a wrap */
   border-bottom:1px dotted rgba(221,192,134,0.38);
   transform:translateY(-.28em);
 }
@@ -104,4 +104,13 @@ html{
   }
   .reveal{ opacity:1; transform:none; }
   .card-hover:hover, .btn-hover:hover{ transform:none; }
+}
+
+/* On a phone, long names ("Fusion / Pre-bonded (keratin)") plus a range price
+   cannot share a line. Drop the leader there — it is decoration — and let the
+   name wrap with the price held to the right. */
+@media (max-width: 480px){
+  .price-list dt::after{ display:none; }
+  .price-list > div{ gap:1rem; }
+  .price-list dd{ text-align:right; }
 }
