@@ -1,9 +1,15 @@
 /* Shared by every page. */
 
 /* Inline SVG icons, sized like the webfont glyphs they replace: 1em square,
-   inheriting colour, sitting on the text baseline. :where() gives this zero
-   specificity so a utility class (w-4, h-5) still overrides it. */
-:where(.icon){
+   inheriting colour, sitting on the text baseline.
+
+   The selector has to be `svg:where(.icon)`, not `:where(.icon)`. Tailwind's
+   preflight sets `svg{display:block}` — a type selector, specificity 0-0-1 —
+   which beats a bare :where() at 0-0-0, so the icons rendered as blocks and
+   the five stars stacked into a column. Matching the type selector's
+   specificity and loading after Tailwind wins the tie, while :where() keeps
+   the class out of it so a utility (w-4, h-5) still overrides the size. */
+svg:where(.icon){
   width:1em; height:1em; fill:currentColor;
   display:inline-block; vertical-align:-0.125em; flex:none;
 }
@@ -94,6 +100,16 @@ html{
 .btn-hover{ transition:transform .18s ease, box-shadow .18s ease, background-color .18s ease, border-color .18s ease, color .18s ease; }
 .btn-hover:hover{ transform:translateY(-2px); box-shadow:0 14px 34px -18px rgba(221,192,134,0.55); }
 
+/* --- Motion ---
+   Content rises and fades as it comes into view. Elements start hidden, so the
+   script that reveals them must be robust: see site.js for why it is a
+   synchronous position sweep rather than an observer. */
+.reveal{
+  opacity:0; transform:translateY(20px);
+  transition:opacity .6s ease, transform .6s cubic-bezier(.22,.61,.36,1);
+}
+.reveal.is-visible{ opacity:1; transform:none; }
+
 #mobileMenu{ transition:max-height .3s ease; overflow:hidden; }
 ::selection{ background:#DDC086; color:#19171A; }
 
@@ -107,6 +123,7 @@ html{
     scroll-behavior:auto !important;
   }
   .card-hover:hover, .btn-hover:hover{ transform:none; }
+  .reveal{ opacity:1; transform:none; }
 }
 
 /* On a phone, long names ("Fusion / Pre-bonded (keratin)") plus a range price
