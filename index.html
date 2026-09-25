@@ -193,14 +193,22 @@
       </dl>
     </div>
 
-    <!-- Editorial image pair. Real photos drop straight into these src paths;
-         until then the .photo texture beneath shows through. -->
+    <!-- Hero collage: the salon's own work. These are above the fold, so they
+         load eagerly and carry width/height to reserve their space. -->
     <div class="reveal grid grid-cols-2 gap-4 sm:gap-5">
-      <div class="photo aspect-[3/4] rounded-2xl mt-8">
-        <img src="salon-styling.jpg" alt="A stylist finishing a blowout at CreativeFaces in Windsor, Connecticut" loading="lazy" decoding="async" width="600" height="800">
+      <div class="photo rounded-2xl mt-8">
+        <img src="hair-balayage.webp" width="700" height="933" decoding="async" fetchpriority="high"
+             alt="Long wavy hair with warm blonde balayage highlights, styled at CreativeFaces">
       </div>
-      <div class="photo aspect-[3/4] rounded-2xl">
-        <img src="boutique-gowns.jpg" alt="Formal gowns on display in the CreativeFaces boutique" loading="lazy" decoding="async" width="600" height="800">
+      <div class="grid gap-4 sm:gap-5">
+        <div class="photo aspect-[3/4] rounded-2xl">
+          <img src="hair-blue-ombre.webp" width="700" height="933" decoding="async"
+               alt="Curly hair coloured in a deep blue ombre, fading from dark roots to bright blue ends">
+        </div>
+        <div class="photo aspect-[3/4] rounded-2xl">
+          <img src="hair-locs-color.webp" width="700" height="933" decoding="async"
+               alt="Long locs wrapped with purple and teal colour through the length">
+        </div>
       </div>
     </div>
 
@@ -253,13 +261,9 @@
 <!-- BOUTIQUE SPOTLIGHT -->
 <section id="boutique" class="py-20 md:py-28 px-6 hairline" aria-labelledby="boutique-title">
   <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 md:gap-14 items-center">
-    <div class="reveal grid grid-cols-2 gap-4">
-      <div class="photo aspect-[3/4] rounded-2xl">
-        <img src="prom-dress-fitting.jpg" alt="A client being fitted for a prom dress in the boutique" loading="lazy" decoding="async" width="600" height="800">
-      </div>
-      <div class="photo aspect-[3/4] rounded-2xl mt-10">
-        <img src="bridal-accessories.jpg" alt="Bridal veils, tiaras and jewelry available in store" loading="lazy" decoding="async" width="600" height="800">
-      </div>
+    <div class="reveal photo aspect-[4/5] rounded-2xl">
+      <img src="boutique-gowns.webp" width="900" height="1125" loading="lazy" decoding="async"
+           alt="Three clients wearing formal gowns from the CreativeFaces boutique, in champagne, white and gold">
     </div>
 
     <div class="reveal">

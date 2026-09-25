@@ -39,16 +39,21 @@ If the address above shows "There isn't a GitHub Pages site here", Pages isn't e
 **Add the social links.** Both pages have two `href="#"` placeholders in the footer, marked
 with a TODO comment, for Instagram and Facebook.
 
-**Add photos (optional).** Four photo slots look for these files:
+**Photos.** The homepage uses four real photos of the salon's work:
 
 ```
-salon-styling.jpg        prom-dress-fitting.jpg
-boutique-gowns.jpg       bridal-accessories.jpg
+hair-balayage.webp      hair-blue-ombre.webp
+hair-locs-color.webp    boutique-gowns.webp
 ```
 
-Upload photos with those exact names and they appear automatically. Until then the slots
-show a branded gold panel instead of a broken image, so the site still looks finished.
-Portrait photos suit the slots best — roughly 3:4, for example 900×1200.
+The first three form the hero collage; the gown photo sits in the Boutique
+section. To swap one, keep the same filename and shape (the hair photos are 3:4,
+the gown photo 4:5), and re-export it as WebP at roughly 700px wide (900 for the
+gown). The originals were 4.3MB of phone JPEGs; at that size they total ~500KB.
+Strip EXIF when exporting, since phone photos can carry GPS coordinates.
+
+If a photo file is ever missing, its slot falls back to a branded gold panel
+rather than a broken image.
 
 **Prices for the remaining services.** Eyelash extensions, nails, hair restoration, hair
 infusions, men's and kids' haircuts, and wedding/event updos appear on the homepage but still
