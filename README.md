@@ -2,7 +2,7 @@
 
 Static site. No build step and nothing to install — these files are what gets served.
 
-Live at **https://gn-ishaan66.github.io/cfv4/**
+Live at **https://creativefaceskathleen.com/**
 
 ```
 index.html           Homepage
@@ -59,12 +59,20 @@ rather than a broken image.
 infusions, men's and kids' haircuts, and wedding/event updos appear on the homepage but still
 have no prices on the menu page.
 
-## If you move to a custom domain
+## The domain
 
-The web address appears in several tags in both pages (`canonical`, `og:url`, `og:image`, and
-the business-details block near the top of `index.html`). Search both files for
-`gn-ishaan66.github.io` and replace all of it. `og:image` especially has to be a complete
-address starting with `https://`, or the logo preview card won't show when the site is shared.
+The site is served from **https://creativefaceskathleen.com**, set by the `CNAME`
+file in this repo. The old `gn-ishaan66.github.io/cfv4` address redirects to it.
+
+If the domain ever changes, the address is written into several places and all of
+them have to move together: `canonical`, `og:url` and `og:image` in each page, the
+business-details block near the top of `index.html`, `robots.txt`, `sitemap.xml`,
+and the `<base href="/">` in `404.html`. That last one is easy to miss — the 404
+page is served for any missing path, so without a correct base its links and
+styling break, which is exactly what happened when the custom domain was added.
+
+`og:image` has to be a complete address starting with `https://`, or the logo
+preview card will not show when the site is shared.
 
 ## Things to know when editing
 
