@@ -5,18 +5,40 @@ update this file: Ishaan's local Claude Code sessions, and the "Creative Faces" 
 project that handles the business side (pricing, policies, client comms, Square and
 domain setup).
 
-**Keep it current.** When a policy, price, setting, or open item changes, update this
-file in the same change (or right after), so the other side doesn't work from stale
-facts. This repo is public: never put payment details, credentials, or private client
-notes here.
-
 For how the code works (file layout, Tailwind build, menu generator, domain gotchas),
 see `README.md`. This file covers the context around it.
 
+## How to keep this file in sync
+
+Neither side can see the other's conversation, so this file is the whole link. When a
+session changes anything that affects the business side, update this file **in the same
+change** as the work itself. That covers:
+
+- prices, services offered, or how a service is named
+- policies (deposits, cancellations, appointments, consultations)
+- address, phone, hours, or anything else a customer uses to reach the salon
+- booking setup
+- domain or hosting
+- open items — what is waiting, and on whom
+
+At the end of a session, run down that list and update anything that moved, including
+the date at the bottom.
+
+**This repo is public.** Never put payment or fee details here: no card or bank details,
+no processor rates, no merchant or account identifiers, no credentials, and no private
+client notes. Anything committed stays in the git history even if deleted later.
+Service prices are fine — they are already printed on the public menu page.
+
+**Don't copy prices into this file.** Hair Room prices live in `scripts/build_menu.py`
+and render into `menu.html`; a second copy here goes stale the first time one changes.
+Link to the live menu instead.
+
 ## Client
 
-- **Business:** CREATIVEFACES Hair Salon & Boutique (site name: CreativeFaces Salon and
-  Makeup Bar)
+- **Business:** CreativeFaces Salon and Makeup Bar. This is the name used everywhere now
+  — the logo and both printed menus use it. The site said "CREATIVEFACES Hair Salon &
+  Boutique" until 2026-09-11, when Kathleen confirmed the change; there is still a
+  boutique, it is just no longer part of the name.
 - **Owner / contact:** Kathleen
 - **Address:** 26 Maple Ave, Windsor, CT 06095 (as on the live site)
 - **Phone:** (860) 212-5175
@@ -37,8 +59,13 @@ see `README.md`. This file covers the context around it.
 
 ## Booking (Square Appointments)
 
-- Booking is a real Square Appointments widget embedded in `index.html` and
-  `menu.html` (`square.site/appointments/buyer/widget/...`). It is live, not simulated.
+- Booking is real and live, but it is a **link, not an embed**: the "Book Now" buttons in
+  `index.html` and `menu.html` open the Square booking page
+  (`square.site/appointments/buyer/widget/...`) in a new tab. Nothing Square renders
+  inside the page — there is no script or iframe. An earlier draft did include Square's
+  embed script, but it injected an unstyled button between two sections and was removed.
+  This is also what lets the privacy page say nothing on the site collects data, so
+  changing it to a real embed means updating that page too.
 - Kathleen manages her own Square account. Services, prices, deposits and policies
   in Square are changed by her (or with her) in the Square dashboard, not in this repo.
 - **Deposit:** 20% on any service over $100. Square has no price-threshold rule, so it
@@ -55,6 +82,20 @@ see `README.md`. This file covers the context around it.
     $95") is borderline.
   - Durations in the CSVs are estimates only; the menu page lists none.
   - Microlocs ($1400–$3200) may need custom pricing in Square.
+
+## What the site shows publicly
+
+- **Social:** instagram.com/creativefacesct and facebook.com/creativefacesct, linked in
+  the footer of both pages and listed as `sameAs` in the business-details block.
+- **Photos:** four of the salon's own photos — three of hair work in the hero, one of
+  three clients in gowns in the Boutique section. The gown photo shows identifiable
+  people; it is the salon's promotional shot, but it is now on a public page.
+- **Reviews:** shown as paraphrased Google reviews, labelled as such, with the rating as
+  plain text. Linking the real Google listing would be safer than paraphrasing.
+- **Privacy page** states the site has no forms, no accounts, no analytics and no cookies
+  of its own, and that booking data is Square's. **If anything is added that collects
+  data — a contact form, analytics, a booking widget rendered in the page itself — that
+  page has to be updated to match, or it becomes untrue.**
 
 ## Pricing source of truth
 
@@ -74,5 +115,13 @@ see `README.md`. This file covers the context around it.
 - [ ] Prices for services shown on the homepage but missing from the menu (see README
       "Still to do").
 - [ ] Possibly draft client communications for Kathleen.
+- [ ] **Google Business Profile still shows the old Manchester address.** Search and Maps
+      route people from that listing, not the website, so until it is updated customers
+      are sent to the wrong town. Square's address appears in booking confirmations and
+      needs the same check.
+- [ ] Confirm the two Microlocs prices (natural $1,400–1,800, with extensions
+      $1,900–3,200). They came from an AI-generated table, were published on the
+      client's say-so, and sit 4–8× above everything else on the menu.
+- [ ] Confirm the people in the boutique photo are happy to appear on the public site.
 
 _Last updated: 2026-09-26_
