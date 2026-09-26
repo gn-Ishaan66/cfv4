@@ -18,7 +18,7 @@ see `README.md`. This file covers the context around it.
 - **Business:** CREATIVEFACES Hair Salon & Boutique (site name: CreativeFaces Salon and
   Makeup Bar)
 - **Owner / contact:** Kathleen
-- **Address:** 194 Buckland Hills Dr, Manchester, CT 06042
+- **Address:** 26 Maple Ave, Windsor, CT 06095 (as on the live site)
 - **Phone:** (860) 212-5175
 - **Hours:** Tuesday–Friday 9am–6pm, Saturday 9am–2pm (see README for every place
   these appear in the HTML)
