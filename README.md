@@ -1,8 +1,13 @@
 # CreativeFaces Salon and Makeup Bar — website
 
-Static site. No build step and nothing to install — these files are what gets served.
+Static site — no framework, and the files here are what gets served. The CSS is compiled
+though, so there is one build step: see "Changing the styling" below.
 
 Live at **https://creativefaceskathleen.com/**
+
+Business context (prices, policies, contact details, open items) lives in
+[CLAUDE.md](CLAUDE.md), which is shared with the separate project handling the business
+side. Update it in the same change whenever something there moves.
 
 ```
 index.html           Homepage
@@ -15,6 +20,8 @@ site.js              Shared behaviour (menu button, photo fallback)
 tailwind.config.cjs  Colours and fonts
 src/input.css        Input to the Tailwind build
 package.json         The build command
+CNAME                The custom domain
+.github/workflows/pages.yml   Deploys the site on every push to main
 scripts/build_menu.py  Every price on the menu page
 logo-*.webp/.png     Logo, in the sizes each spot needs
 favicon-*, apple-touch-icon.png   Browser tab and phone icons
@@ -25,19 +32,18 @@ robots.txt, sitemap.xml   For search engines
 Every file sits at the top level of the repository, and the pages expect to find them
 there. Don't move them into a subfolder without updating the links inside both pages.
 
-## Turning the site on
+## How it deploys
 
-If the address above shows "There isn't a GitHub Pages site here", Pages isn't enabled yet:
+Push to `main` and the site rebuilds itself. `.github/workflows/pages.yml` publishes the
+repository root to GitHub Pages, and the change is live in roughly 20–30 seconds. Pages
+is served from that workflow, not from a branch setting, and the workflow switched Pages
+on by itself the first time it ran.
 
-1. Repository **Settings → Pages**.
-2. Under **Source**, choose **Deploy from a branch**.
-3. Branch **main**, folder **/ (root)**, then **Save**.
-4. Wait a minute and reload the address.
+Returning visitors can lag a change by up to 10 minutes: GitHub serves these files with
+`max-age=600`, so a browser may hold the old CSS or JS that long. A hard refresh
+(Ctrl+F5) shows it immediately.
 
 ## Still to do
-
-**Add the social links.** Both pages have two `href="#"` placeholders in the footer, marked
-with a TODO comment, for Instagram and Facebook.
 
 **Photos.** The homepage uses four real photos of the salon's work:
 
