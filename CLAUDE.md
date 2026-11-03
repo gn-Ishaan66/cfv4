@@ -87,6 +87,10 @@ Link to the live menu instead.
 
 - **Social:** instagram.com/creativefacesct and facebook.com/creativefacesct, linked in
   the footer of both pages and listed as `sameAs` in the business-details block.
+  **But the salon's actual Instagram account is `@creativefaces_salon_boutique_`** (the
+  one connected for marketing, see below). Check whether `creativefacesct` exists and is
+  theirs; if not, change the Instagram link and `sameAs` entry in `index.html` and
+  `menu.html` to the real handle.
 - **Photos:** four of the salon's own photos — three of hair work in the hero, one of
   three clients in gowns in the Boutique section. The gown photo shows identifiable
   people; it is the salon's promotional shot, but it is now on a public page.
@@ -96,6 +100,20 @@ Link to the live menu instead.
   of its own, and that booking data is Square's. **If anything is added that collects
   data — a contact form, analytics, a booking widget rendered in the page itself — that
   page has to be updated to match, or it becomes untrue.**
+
+## Instagram and marketing
+
+- Started 2026-11-03 because business is slow; Kathleen approved connecting the account.
+- `@creativefaces_salon_boutique_` (a Creator account) is connected to the business-side
+  Claude project through Composio, for posting, reading insights, and pulling photos.
+  Instagram's API can't schedule posts, so Claude publishes at planned times after
+  Ishaan approves each batch.
+- The marketing plan (posting rhythm, promotions, first posts) is a Claude Doc in the
+  project, not in this repo. Promotions are suggestions until Kathleen confirms them.
+- **Instagram photos on the site:** the plan is a static "Latest from Instagram" strip:
+  download recent posts, re-export as WebP per the README photo rules, link each to its
+  post. No embed widget, because that loads a third-party script and cookies and would
+  make the privacy page untrue. Only use posts whose subjects agreed to appear.
 
 ## Pricing source of truth
 
@@ -123,5 +141,10 @@ Link to the live menu instead.
       $1,900–3,200). They came from an AI-generated table, were published on the
       client's say-so, and sit 4–8× above everything else on the menu.
 - [ ] Confirm the people in the boutique photo are happy to appear on the public site.
+- [ ] Fix the site's Instagram link if `creativefacesct` is not the salon's account (see
+      "What the site shows publicly").
+- [ ] A March 2025 Instagram reel says the salon moved to 60 Main Street, Windsor; the
+      site says 26 Maple Ave. Confirm the current address with Kathleen.
+- [ ] Kathleen to pick which promotions to run, and whether to turn on Square eGift cards.
 
-_Last updated: 2026-09-26_
+_Last updated: 2026-11-03_
